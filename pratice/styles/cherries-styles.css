@@ -1,0 +1,17 @@
+.grid_container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    
+}
+h2{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   text-align: center;
+}
+
+img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
