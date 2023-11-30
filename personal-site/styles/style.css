@@ -55,9 +55,11 @@ body {
   grid-template-rows: repeat(4, 1fr);
   }
 #welcome img{
+  grid-area: 2/1/1/4;
   width: 100px; 
   height: 200px;
   margin: 10px;
+  text-align: center;
 }
 
 .message{
