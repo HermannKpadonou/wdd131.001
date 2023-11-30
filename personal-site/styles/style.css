@@ -55,13 +55,13 @@ body {
   grid-template-rows: repeat(4, 1fr);
   }
 #welcome img{
-  width: 400px; 
+  width: 100px; 
   height: 200px;
   margin: 10px;
 }
 
 .message{
-  width: 200px; 
+  width: 500px; 
   height: 200px;
   margin: 10px;
 }
