@@ -1,0 +1,112 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: Merriweather, Helvetica, sans-serif;
+}
+#logo_link{
+    padding: 5px;
+}
+.logo{
+    width: 90px;
+}
+nav a{
+    text-align: center;
+    color:white;
+    background-color:#808080;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+  border-radius: 5px;
+}
+nav a:hover{
+    background-color:#EF233C;
+    color: white;
+  }
+nav {
+   display: flex;
+   justify-content: right;
+}
+header{
+    background-color:#808080;
+    display: grid;
+    grid-template-columns: 25px auto;
+    align-items: center;
+    height: auto;
+}
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+  }
+  main section {
+    text-align: center;
+  }
+
+#welcome{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  }
+#welcome img{
+  width: 400px; 
+  height: 200px;
+  margin: 10px;
+}
+
+.message{
+  width: 200px; 
+  height: 200px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #808080; 
+  display: flex; 
+  align-items: center;
+  }
+  
+  footer p {
+  color: white; 
+  margin: 10px;
+  flex: 5;
+  }
+  
+  
+  footer img {
+  width: 100px; 
+  height: 100px;
+  margin: 10px;
+  }
+  
+  
+  .social {
+  display: flex;
+  justify-content: center;
+  flex: 1; 
+  }
+  
+  
+  .social img {
+  width: 50px; 
+  height: 50px; 
+  margin: 10px;
+  } 
+  
+
+footer p {
+  color: white; 
+  margin: 10px; 
+  text-align: center; 
+  grid-column: 1 / 6; 
+  grid-row: 2 / 3;
+  }
+  
+  
+  
