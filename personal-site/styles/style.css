@@ -49,33 +49,50 @@ body {
     text-align: center;
   }
 
-#welcome{
+/* #welcome{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  }
-.pic_ceo{
+  } */
+/* .pic_ceo{
   grid-area: 2/2/1/4;
   width: 50px; 
   height: 100px;
   margin: 10px;
   float: left;
+} */
+
+.pic_ceo img {
+  width: 200px;
+  height: 250px;
+  float:left;
+  border-radius: 20px 20px 0 20px;
 }
 
 .message{
-  width: 500px; 
-  height: 200px;
+  width: 650px; 
+  height: 00px;
   margin: 10px;
+  /* padding-left: 300px;
+  padding-right: 300px; */
+  margin-left: 90px;
+  margin-top: 130px;
+}
+
+.message > p {
+  text-align: justify;
 }
 
 
 footer {
-  background-color: #808080; 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(2, 1fr); 
+  background-color:#808080; 
+  display: flex;
+  /* display: grid;  */
+  /* grid-template-columns: repeat(3, 1fr);  */
+  /* grid-template-rows: repeat(2, 1fr);  */
   gap: 10px; 
   padding: 20px; 
+  justify-content: center;
   }
   
   
@@ -100,7 +117,7 @@ footer {
   grid-column: 1 / 2;
   grid-row: 1 / 2; 
   justify-self: start;
-  align-self: start;
+  /* align-self: start; */
   }
   
 
@@ -108,7 +125,7 @@ footer {
   grid-column: 3 / 4; 
   grid-row: 1 / 2; 
   justify-self: end; 
-  align-self: start; 
+  /* align-self: start;  */
   }
   
   .social {
@@ -117,6 +134,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; 
+  margin-left: 100px;
+  margin-right: 100px;
   }
   
   .social img {
@@ -125,18 +144,18 @@ footer {
   margin: 50px; 
   }
 
-  #link {
+/* #link {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 position: relative;
 background-image: url('images/equipe.jpg');
 background-size: cover;
-}
+} */
 
-.admin, .official, .contact {
+/* .admin, .official, .contact {
 position: absolute;
-}
+} */
 
 .admin {
 grid-area:2/1;
@@ -163,4 +182,128 @@ z-index: 2;
 z-index: 1;
 width: 100%;
 height: 100%;
+}
+
+#spirit {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 0 80px 0;
+  background-image: linear-gradient(transparent, #2B2D42), url('images/equipe3.jpg');
+  background-size: cover;
+  position: relative;
+  }
+  #spirit img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  z-index: -1; 
+  }
+  .spirit-3 {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+  
+.mission, .vision, .value {
+  width: 25%;
+  background-color: #efefef;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  }
+  
+.mission > p, .vision > p, .value > p {
+  text-align: justify;
+  }
+  
+.mission {
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+}
+  
+.vision {
+  top: 50%; 
+  right: 10%; 
+  transform: translate(10%, -50%);
+}
+  
+.value {
+  bottom: 10%; 
+  left: 50%; 
+  transform: translate(-50%, -10%);
+}
+
+#link {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(transparent, #EF233C), url('../images/equipe.jpg');
+  background-size: cover;
+  background-color: #EF233C;
+}
+
+#link img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.admin, .official, .contact {
+  display: flex;
+  align-items: center;
+}
+
+img[alt="icon_contact"] {
+  width: 50px !important;
+}
+
+#link a, #link p {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#welcome {
+  background-color: #8D99AE;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 190px;
+  color: #ffffff;
+}
+
+.welcome-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.Chairman_word {
+  margin-bottom: 20px;
+}
+
+.pic_ceo {
+  position: absolute;
+  left: 475px;
+  top: -20px;
+}
+
+.separator {
+  border: #ffffff solid 5px;
+  width: 100px;
+  margin: auto;
+  margin-bottom: 80px;
 }
