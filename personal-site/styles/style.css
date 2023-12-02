@@ -24,7 +24,7 @@ nav a{
   border-radius: 5px;
 }
 nav a:hover{
-    background-color:#EF233C;
+    background-color:#D90429;
     color: white;
   }
 nav {
@@ -244,9 +244,9 @@ height: 100%;
   height: 500px;
   align-items: center;
   justify-content: space-around;
-  background-image: linear-gradient(transparent, #EF233C), url('../images/equipe.jpg');
+  background-image: linear-gradient(transparent, #D90429), url('../images/equipe.jpg');
   background-size: cover;
-  background-color: #EF233C;
+  background-color: #D90429;
 }
 
 #link img {
