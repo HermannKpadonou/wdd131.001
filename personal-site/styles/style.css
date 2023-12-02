@@ -162,7 +162,7 @@ grid-area:2/1;
 top: 10px;
 left: 0;
 z-index: 2;
-border-radius: 20px 20px 20px 20px;
+border-radius: 5px;
 }
 
 .official {
@@ -170,14 +170,14 @@ grid-area: 2/2;
 top: 10px;
 align-self: center;
 z-index: 2;
-border-radius: 20px 20px 20px 20px;
+border-radius: 5px;
 }
 
 .contact {
 grid-area: 2/3;
 top: 10px;
 z-index: 2;
-border-radius: 5px
+border-radius: 5px;
 }
 
 #link img {
