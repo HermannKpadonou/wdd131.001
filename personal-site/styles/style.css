@@ -416,89 +416,148 @@ to {opacity: 1}
   width: 100%; /* set the width of the image box to 100% of the container */
   height: 500px; /* set the height of the image box to 500px */
   object-fit: cover; /* make the image fill the box without distorting the ratio */
-  }
+}
 
 
+  
 .yélé_grid{
-    display:grid ;
-    grid-template-columns: repeat(4,1fr);
-}
-.manager {
-    width: 100%;
-    background-image: linear-gradient(transparent, white), url('../images/equipe2.jpg');
-    background-size: cover;
-}
-.operation{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    left: 0;
-    padding: 15px;
-    margin: 15px;
-}
-.trade{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    padding: 15px;
-    margin: 15px;
-}
-.corporate{
-  grid-column: 3/4;
-  grid-row: 2/3;
-  padding: 15px;
-  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-image: linear-gradient(transparent, rgb(237, 207, 207));
+  background-size: cover;
+  gap: 15px; /* Espacement entre les images */
+  align-items: center;
   }
-.compliance{
-  grid-column: 4/5;
-  grid-row: 2/3;
-  padding: 15px;
-  margin: 15px;
-}
-
-.yao {
-  border: 10px solid #8D99AE;
-  width: 275px;
+    
+.manager {
+  grid-column: 1 / 9; /* Occuper les 8 colonnes */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Créer 4 colonnes pour les articles */
+  grid-template-rows: auto auto; /* Créer 2 lignes pour le titre et les articles */
+  gap: 15px; /* Espacement entre les éléments */
+  }
+    
+.manager h1 {
+  grid-column: 1 / 5; /* Occuper les 4 colonnes */
+  text-align: center;
+  }
+  
+    
+.manager article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+    
+.manager article img {
+  border: 10px solid #2B2D42;
+  width: 250px;
   height: 300px;
   transition: transform .5s;
-  box-shadow: 5px 5px 10px #8D99AE;
-}
-.yao:hover {
+  box-shadow: 5px 5px 10px #8D99AE
+    }
+    
+.manager article img:hover {
   opacity: .6;
   transform: scale(1.1);
-}
+  }
 
-.della {
-  border: 10px solid #8D99AE;
-  width: 275px;
-  height: 300px;
-  transition: transform .5s;
-  box-shadow: 5px 5px 10px #8D99AE;
-}
-.della:hover {
-  opacity: .6;
-  transform: scale(1.1);
-}
+.manager article h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  }
 
-.ekou {
-  border: 10px solid #8D99AE;
-  width: 275px;
-  height: 300px;
-  transition: transform .5s;
-  box-shadow: 5px 5px 10px #8D99AE;
-}
-.ekou:hover {
-  opacity: .6;
-  transform: scale(1.1);
-}
 
-.rachel {
-  border: 10px solid #8D99AE;
-  width: 275px;
-  height: 300px;
-  transition: transform .5s;
-  box-shadow: 5px 5px 10px #8D99AE;
-}
-.rachel:hover {
-  opacity: .6;
-  transform: scale(1.1);
-}
+  .block1 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+  .block2 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  
+  .block3 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+  }
+  
+  .term {
+    background-image: url("../images/term_et_condition.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
 
+  .main {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 0 80px 0;
+    position: relative;
+  }
+  .sub-title{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin-bottom: 70px;
+  }
+  .sub-title img{
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    left: 35%;
+    z-index: -1;
+  }
+  .sub-title h2{
+  text-align: center;
+  margin: auto; 
+  }
+  .rule1, .rule2, .rule3{
+    width: 25%;
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .rule1 > p, .rule2 > p, .rule3 > p{
+  text-align: justify;
+  }
+ 
+  .condition h2 {
+    text-align: center;
+    color: black;
+    font-size: 24px;
+  }
+  
+  .condition1, .condition2, .condition3 {
+    width: 25%;
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+    bottom: 20%;
+  }
+  
+  .condition1 > p, .condition2 > p, .condition3 > p {
+    text-align: justify;
+  }
+  
+  .condition2 img {
+    width: 100%;
+    height: auto;
+  }

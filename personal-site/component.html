@@ -1,119 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-/* Styles pour le slider */
-.slider {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-}
-
-/* Styles pour chaque diapositive */
-.slide-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #fff; /* Ajout d'une bordure blanche autour des images */
-}
-
-.slide[data-index="0"] {
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 10px; /* Ajout d'une marge en haut */
-  left: 10px; /* Ajout d'une marge à gauche */
-  right: 10px; /* Ajout d'une marge à droite */
-  bottom: 10px; /* Ajout d'une marge en bas */
-  background-color: rgba(243, 5, 5, 0.5);
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  opacity: 0;
-  transition: 0.5s ease;
-}
-
-.overlay:hover {
-  opacity: 1;
-}
-
-/* Styles pour les boutons précédent/suivant */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: white;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.prev {
-  left: 10px;
-  background-color: cadetblue;
-}
-
-.next {
-  right: 10px;
-  background-color: cadetblue;
-}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/component.css">
+<link rel="stylesheet" href="styles/style.css">
+<title>Document</title>
 </head>
 <body>
-<div class="slider">
-  <div class="slide-container">
-    <div class="slide" data-index="0">
-      <img src="images/operation.jpg" alt="Opération">
-      <div class="overlay">Texte 1</div>
-    </div>
-    <div class="slide" data-index="1">
-      <img src="images/trade.jpg" alt="Trade">
-      <div class="overlay">Texte 2</div>
-    </div>
-    <div class="slide" data-index="2">
-      <img src="images/corporate.jpg" alt="corporate">
-      <div class="overlay">Texte 3</div>
-    </div>
-    <div class="slide" data-index="3">
-      <img src="images/compliance.jpg" alt="Compliance">
-      <div class="overlay">Texte 4</div>
+<style>
+  .main {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 0 80px 0;
+  position: relative;
+}
+.sub-title{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  margin-bottom: 70px;
+}
+.sub-title img{
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  /*top: 30px; */
+  left: 35%;
+  z-index: -1;
+}
+.sub-title h2{
+text-align: center;
+margin: auto; /* centrer le h2 horizontalement et verticalement */
+}
+.rule1, .rule2, .rule3{
+  width: 25%;
+  background-color: #efefef;
+  padding: 20px;
+  border-radius: 5px;
+  /*position: absolute;*/
+  z-index: 1;
+}
+
+/*.rule1 {
+  top: 50%;
+  left: 7%;
+  transform: translate(-10%, -50%);
+}
+  
+.rule2 {
+  top: 50%; 
+  right: 5%; 
+  transform: translate(10%, -50%);
+}
+  
+.rule3 {
+  bottom: 10%; 
+  left: 50%; 
+  transform: translate(-50%, -10%);
+}*/
+
+.rule1 > p, .rule2 > p, .rule3 > p{
+text-align: justify;
+}
+
+/*.condition {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 0 80px 0;
+  position: relative;
+}*/
+
+.condition h2 {
+  text-align: center;
+  color: black;
+  font-size: 24px;
+}
+
+.condition1, .condition2, .condition3 {
+  width: 25%;
+  background-color: #efefef;
+  padding: 20px;
+  border-radius: 5px;
+  /*position: absolute;*/ 
+  z-index: 1;
+  bottom: 20%;
+}
+
+.condition1 > p, .condition2 > p, .condition3 > p {
+  text-align: justify;
+}
+
+/*.condition1 {
+  top: 100%;
+  left: 7%;
+  transform: translate(-10%, -20%);
+}
+  
+.condition2 {
+  top: 50%; 
+  right: 5%; 
+  transform: translate(10%, -20%);
+}
+  
+.condition3 {
+  bottom: 10%; 
+  left: 50%; 
+  transform: translate(-50%, -20%);
+}*/
+
+.condition2 img {
+  width: 100%;
+  height: auto;
+}
+</style>
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo_yele.jpg" alt="yélé_Logo"> 
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="yele_department.html">Yélé Departments</a>
+                <a href="rules_at_home.html">Rules at Home</a>
+                <a href="site-plan.html">Site Plan</a>
+            </nav>
+        </header>
+<main>
+  <div class="rule">
+        <!-- <img src="images/rules.jpg" alt="rule"> -->
+        <div class="sub-title"> <!-- utiliser un nom de classe différent -->
+          <img src="images/icon_rule.jpg" alt="rule_icon">
+          <h2>Internal Regualtions</h2>
+        </div>
+        <div class="block1">
+          <div class="rule1">
+            <p>1 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
+          </div>
+          <div class="rule2">
+            <p>2 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
+          </div>
+          <div class="rule3">
+            <p>3 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
+          </div>
+        </div>
+  </div>
+
+  <div>
+    <div class="term">
+
     </div>
   </div>
-  <button class="prev" onclick="changeSlide(-1)"><</button>
-  <button class="next" onclick="changeSlide(1)">></button>
-</div>
+  <div class="condition">
 
-<script>
-    var index = 0; // index de l'image courante
-    
-    function changeSlide(direction) {
-      // direction du changement (-1 ou 1)
-      var slides = document.getElementsByClassName("slide"); // collection des éléments slide
-      var overlays = document.getElementsByClassName("overlay"); // collection des éléments overlay
-      var length = slides.length; // nombre d'éléments slide
-      slides[index].style.display = "none"; // masquer l'image courante
-      overlays[index].style.opacity = 0; // masquer le texte de l'image courante
-      index = (index + direction + length) % length; // calculer le nouvel index en tenant compte des limites
-      slides[index].style.display = "block"; // afficher la nouvelle image
-      overlays[index].style.opacity = 1; // afficher le texte de la nouvelle image
-    }
-</script>
+    <div style="margin-bottom: 70px;">
+      <h2>Terms and Conditions</h2>
+    </div>
+
+    <div class="block3">
+
+      <div class="condition1">
+        <p>To be able to benefit from the service, the Client must register with the YELE MONEY Agents by filling out the YELE MONEY subscription form or by using the self-enrollment tool from his Smartphone.
+        They will then be asked to create a secret code consisting of four (4) digits that will allow them to make their transactions via a terminal or from the YELE MONEY app.
+        </p> 
+      </div>
+      <div class="condition2">
+        <img src="images/rules2.jpg" alt="rules">
+      </div>
+      <div class="condition3">
+        <p>The parties agree that all taxes and duties to which this deed is subject are the responsibility of the client who authorizes YELE MONEY by express agreement to make the necessary deductions for their payments to the Tax Administration whenever they are required.
+        The Client declares that he/she is aware of the current tax regime applicable to banking or financial activities in Côte d'Ivoire.
+        </p>
+      </div>  
+
+    </div>
+
+
+    </div>
+
+    <footer>
+      <div>
+      <div class="footer">
+          <img src="images/logo_yele.jpg" alt="symbol">
+          <div class="social">
+              <a href="https://linkedin.com" target="_blank">
+                  <img src="images/linkdin.jpg" alt="Linkedin">
+              </a>   
+              <a href="https://facebook.com" target="_blank">
+                  <img src="images/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://twitter.com" target="_blank">
+                  <img src="images/X.jpg" alt="twitter icon">
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                  <img src="images/instagram.jpg" alt="instagram icon">
+              </a>
+          </div>
+      <img src="images/logo_yele.jpg" alt="test">
+      </div>
+      <p>OASIS yélé &copy; 2023 - Hermann KPADONOU</p>
+      </div>
+  </footer>
+</main>
 </body>
 </html>
