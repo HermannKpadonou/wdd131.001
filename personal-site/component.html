@@ -1,210 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/component.css">
-<link rel="stylesheet" href="styles/style.css">
-<title>Document</title>
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  .main {
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: space-around;
-  padding: 80px 0 80px 0;
-  position: relative;
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
 }
-.sub-title{
-  display: flex;
-  justify-content: space-evenly;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  margin-bottom: 70px;
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
 }
-.sub-title img{
-  width: 40px;
-  height: 50px;
-  position: absolute;
-  /*top: 30px; */
-  left: 35%;
-  z-index: -1;
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
 }
-.sub-title h2{
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
 text-align: center;
-margin: auto; /* centrer le h2 horizontalement et verticalement */
-}
-.rule1, .rule2, .rule3{
-  width: 25%;
-  background-color: #efefef;
-  padding: 20px;
-  border-radius: 5px;
-  /*position: absolute;*/
-  z-index: 1;
 }
 
-/*.rule1 {
-  top: 50%;
-  left: 7%;
-  transform: translate(-10%, -50%);
-}
-  
-.rule2 {
-  top: 50%; 
-  right: 5%; 
-  transform: translate(10%, -50%);
-}
-  
-.rule3 {
-  bottom: 10%; 
-  left: 50%; 
-  transform: translate(-50%, -10%);
-}*/
-
-.rule1 > p, .rule2 > p, .rule3 > p{
-text-align: justify;
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
 }
 
-/*.condition {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 80px 0 80px 0;
-  position: relative;
-}*/
-
-.condition h2 {
-  text-align: center;
-  color: black;
-  font-size: 24px;
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
 }
 
-.condition1, .condition2, .condition3 {
-  width: 25%;
-  background-color: #efefef;
-  padding: 20px;
-  border-radius: 5px;
-  /*position: absolute;*/ 
-  z-index: 1;
-  bottom: 20%;
+.active, .dot:hover {
+background-color: #717171;
 }
 
-.condition1 > p, .condition2 > p, .condition3 > p {
-  text-align: justify;
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
 }
 
-/*.condition1 {
-  top: 100%;
-  left: 7%;
-  transform: translate(-10%, -20%);
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
 }
-  
-.condition2 {
-  top: 50%; 
-  right: 5%; 
-  transform: translate(10%, -20%);
-}
-  
-.condition3 {
-  bottom: 10%; 
-  left: 50%; 
-  transform: translate(-50%, -20%);
-}*/
 
-.condition2 img {
-  width: 100%;
-  height: auto;
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+
+/* Flex display for slides */
+.mySlides1, .mySlides2 {
+display: flex;
+align-items: center;
+}
+
+/* Fixed width for text */
+.text {
+width: 200px;
+}
+
+/* Flexible width for image */
+img {
+flex: 1;
 }
 </style>
-        <header>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo_yele.jpg" alt="yélé_Logo"> 
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="yele_department.html">Yélé Departments</a>
-                <a href="rules_at_home.html">Rules at Home</a>
-                <a href="site-plan.html">Site Plan</a>
-            </nav>
-        </header>
-<main>
-  <div class="rule">
-        <!-- <img src="images/rules.jpg" alt="rule"> -->
-        <div class="sub-title"> <!-- utiliser un nom de classe différent -->
-          <img src="images/icon_rule.jpg" alt="rule_icon">
-          <h2>Internal Regualtions</h2>
-        </div>
-        <div class="block1">
-          <div class="rule1">
-            <p>1 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
-          </div>
-          <div class="rule2">
-            <p>2 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
-          </div>
-          <div class="rule3">
-            <p>3 The YELE MONEY e-wallet is an individual account. A Customer can only have one YELE MONEY wallet. The Client is required to notify YELE MONEY of any change in his personal data communicated at the time of opening a YELE MONEY electronic wallet (age of majority, change of address). The YELE MONEY e-wallet is only and solely intended to receive and store e-money. It may not hold any other securities, securities or financial instruments and no sums of money in any currency whatsoever. Calls, letters or text messages made or received by the Client may be monitored and/or recorded as part of diligent business conduct.</p>
-          </div>
-        </div>
-  </div>
+</head>
+<body>
 
-  <div>
-    <div class="term">
+<h1>Groupe 1</h1>
+<div class="slideshow-container">
 
-    </div>
-  </div>
-  <div class="condition">
+<div class="mySlides1 fade">
+<div class="numbertext">1 / 3</div>
+<img src="images/operation.jpg" style="width:100%">
+<div class="text">Caption Text</div>
+</div>
 
-    <div style="margin-bottom: 70px;">
-      <h2>Terms and Conditions</h2>
-    </div>
+<div class="mySlides1 fade">
+<div class="numbertext">2 / 3</div>
+<img src="images/trade.jpg" style="width:100%">
+<div class="text">Caption Two</div>
+</div>
 
-    <div class="block3">
+<div class="mySlides1 fade">
+<div class="numbertext">3 / 3</div>
+<img src="images/corporate.jpg" style="width:100%">
+<div class="text">Caption Three</div>
+</div>
 
-      <div class="condition1">
-        <p>To be able to benefit from the service, the Client must register with the YELE MONEY Agents by filling out the YELE MONEY subscription form or by using the self-enrollment tool from his Smartphone.
-        They will then be asked to create a secret code consisting of four (4) digits that will allow them to make their transactions via a terminal or from the YELE MONEY app.
-        </p> 
-      </div>
-      <div class="condition2">
-        <img src="images/rules2.jpg" alt="rules">
-      </div>
-      <div class="condition3">
-        <p>The parties agree that all taxes and duties to which this deed is subject are the responsibility of the client who authorizes YELE MONEY by express agreement to make the necessary deductions for their payments to the Tax Administration whenever they are required.
-        The Client declares that he/she is aware of the current tax regime applicable to banking or financial activities in Côte d'Ivoire.
-        </p>
-      </div>  
+<a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+<a class="next" onclick="plusSlides(1, 0)">❯</a>
 
-    </div>
+</div>
+<br>
 
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1, 0)"></span> 
+<span class="dot" onclick="currentSlide(2, 0)"></span> 
+<span class="dot" onclick="currentSlide(3, 0)"></span> 
+</div>
 
-    </div>
+<h1>Groupe 2</h1>
+<div class="slideshow-container">
 
-    <footer>
-      <div>
-      <div class="footer">
-          <img src="images/logo_yele.jpg" alt="symbol">
-          <div class="social">
-              <a href="https://linkedin.com" target="_blank">
-                  <img src="images/linkdin.jpg" alt="Linkedin">
-              </a>   
-              <a href="https://facebook.com" target="_blank">
-                  <img src="images/facebook.png" alt="Facebook">
-              </a>
-              <a href="https://twitter.com" target="_blank">
-                  <img src="images/X.jpg" alt="twitter icon">
-              </a>
-              <a href="https://instagram.com" target="_blank">
-                  <img src="images/instagram.jpg" alt="instagram icon">
-              </a>
-          </div>
-      <img src="images/logo_yele.jpg" alt="test">
-      </div>
-      <p>OASIS yélé &copy; 2023 - Hermann KPADONOU</p>
-      </div>
-  </footer>
-</main>
+<div class="mySlides2 fade">
+<div class="numbertext">1 / 3</div>
+<img src="images/Yele_project1.jpg" style="width:100%">
+<div class="text">Caption One</div>
+</div>
+
+<div class="mySlides2 fade">
+<div class="numbertext">2 / 3</div>
+<img src="images/Yele_project2.jpg" style="width:100%">
+<div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides2 fade">
+<div class="numbertext">3 / 3</div>
+<img src="images/Yele_project3.jpg" style="width:100%">
+<div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+<a class="next" onclick="plusSlides(1, 1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1, 1)"></span> 
+<span class="dot" onclick="currentSlide(2, 1)"></span> 
+<span class="dot" onclick="currentSlide(3, 1)"></span> 
+</div>
+
+<script>
+let slideIndex = [1, 1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+showSlides(slideIndex[no] += n, no);
+}
+
+function currentSlide(n, no) {
+showSlides(slideIndex[no] = n, no);
+}
+
+function showSlides(n, no) {
+let i;
+let x = document.getElementsByClassName(slideId[no]);
+let dots = document.getElementsByClassName("dot");
+if (n > x.length) {slideIndex[no] = 1}    
+if (n < 1) {slideIndex[no] = x.length}
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+x[slideIndex[no]-1].style.display = "block";  
+dots[slideIndex[no]-1].className += " active";
+}
+</script>
+
 </body>
 </html>
